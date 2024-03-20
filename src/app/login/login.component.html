@@ -1,0 +1,85 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" class="row custom-form">
+    <!-- Personal Details  -->
+    <div class="col-md-12">
+      <h2>Personal Details</h2>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="Firstname">First Name</label>
+          <input type="text" formControlName="firstname" id="Firstname" class="form-control" placeholder="Enter First Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Lastname">Last Name</label>
+          <input type="text" formControlName="Lastname" id="Lastname" class="form-control" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="dob">Date Of Birth</label>
+          <input type="date" formControlName="dob" id="dob" class="form-control" placeholder="Enter Date of Birth">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="gender">Gender</label>
+          <select formControlName="gender" id="gender" class="form-control">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="maritalstatus">Marital Status</label>
+          <select formControlName="Maritalstatus" id="maritalstatus" class="form-control">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="fatherName">Father Name</label>
+          <input type="text" formControlName="fatherName" id="fatherName" class="form-control" placeholder="Enter Father Name">
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Details  -->
+    <div class="col-md-12">
+      <h2>Educational Details</h2>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="university">University</label>
+          <input type="text" id="university" formControlName="university" class="form-control" placeholder="Enter University">
+        </div>
+       
+        <div class="form-group col-md-6">
+          <label for="board">Board</label>
+          <input type="text" id="board" formControlName="board" class="form-control" placeholder="Enter Board">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="yearOfPassing">Year Of Passing:</label>
+          <input type="date" id="yearOfPassing" formControlName="yearOfPassing" class="form-control">
+        </div>
+      </div>
+    </div>
+<!-- privious employee -->
+    <div class="col-md-12">
+      <h2>Previous Employee</h2>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="company">Previous Company</label>
+          <input type="text" id="company" formControlName="company" class="form-control" placeholder="Enter Previous Company">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="position">Position</label>
+          <input type="text" id="position" formControlName="position" class="form-control" placeholder="Enter Position">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="file-attached">Upload your resume</label>
+          <input type="file" id="file-attached" name="file-attached" class="form-control-file">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary" (click)="submitform()">Submit</button>
+    </div>
+  </form>
+</div>
